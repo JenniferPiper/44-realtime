@@ -10,5 +10,6 @@ sendMessageForm.addEventListener('submit', event => {
 });
 
 backEndServer.on('RECEIVE_MESSAGE', (data) => {
-  console.log('__RECEIVE_MESSAGE__', )
-})
+  console.log('__RECEIVE_MESSAGE__', data);
+});
+
