@@ -21,7 +21,7 @@ realTimeServer.on('connection', (socket) => {
 
   socket.on(SEND_MESSAGE, (data) => {
     console.log('__SOCKET_EVENT__', SEND_MESSAGE);
-    socket.emit(RECEIVE_MESSAGE, 'You have sent a message.')
+    socket.emit(RECEIVE_MESSAGE, 'You have sent a message.');
     realTimeServer.emit(RECEIVE_MESSAGE, {
       ...data,
       id: uuid(),
@@ -36,7 +36,7 @@ realTimeServer.on('disconnect', () => {
 
 realTimeServer.on('error', (error) => {
   console.log('__ERROR__ ', error);
-})
+});
 
 httpServer.listen(process.env.PORT, () => {
   console.log('__BACKEND_SERVER_UP__ on port ', process.env.PORT);
